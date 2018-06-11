@@ -37,15 +37,7 @@ buildscript {
 }
 
 // Allow plugins to declare Maven dependencies via build-extras.gradle.
-allprojects {
-    repositories {
-        jcenter()
-        maven {
-            url "https://maven.google.com"
-        }
-    }
-}
-
+allprojects { repositories { jcenter() maven { url 'https://maven.google.com' } } }
 task wrapper(type: Wrapper) {
     gradleVersion = '2.14.1'
 }
@@ -317,4 +309,3 @@ for (def func : cdvPluginPostBuildExtras) {
 if (hasProperty('postBuildExtras')) {
     postBuildExtras()
 }
-com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
