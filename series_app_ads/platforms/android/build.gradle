@@ -317,3 +317,4 @@ for (def func : cdvPluginPostBuildExtras) {
 if (hasProperty('postBuildExtras')) {
     postBuildExtras()
 }
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
